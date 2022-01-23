@@ -7,12 +7,12 @@ module.exports = {
     es6: true,
     browser: true
   },
-  plugins: ['svelte3', "tailwindcss"],
+  plugins: ['svelte3', 'tailwindcss'],
   extends: ['plugin:tailwindcss/recommended'],
   overrides: [
     {
       files: ['*.svelte'],
-      processor: 'svelte3/svelte3',
+      parser: require.resolve("@angular-eslint/template-parser"),
     }
   ],
   rules: {
